@@ -17,3 +17,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+
+## Build A Simple PHX Project:
+mix phx.new tariff_service --no-assets --no-html --no-dashboard --no-live --no-mailer
+
+## Run the Project
