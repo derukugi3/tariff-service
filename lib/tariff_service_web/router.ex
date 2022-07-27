@@ -5,7 +5,29 @@ defmodule TariffServiceWeb.Router do
     plug :accepts, ["json"]
   end
 
+  # scope "/api", TariffServiceWeb do
+  #   pipe_through :api
+  # end
+
   scope "/api", TariffServiceWeb do
-    pipe_through :api
+    scope "/v1", Api.V1 do
+      pipe_through(:api)
+      get("/status", StatusController, :index)
+    end
   end
+
+  scope "/api", TariffServiceWeb do
+    scope "/v2", Api.V2 do
+      pipe_through(:api)
+      get("/status", StatusController, :index)
+    end
+  end
+
+
+
+
+
+
+
+
 end
